@@ -8,7 +8,6 @@ const Piepagina = () => {
             <h2>Sitio web para fanaticos de Dragon Ball Super - Desarrollado por Marco Gallardo</h2>
         </div>
     )
-
 }
 
 export default Piepagina;
