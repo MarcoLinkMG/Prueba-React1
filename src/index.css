@@ -31,3 +31,12 @@ code {
   grid-template-columns: repeat(4, 1fr);
   gap: 45px
 }
+
+footer{
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(212, 62, 36);
+  height: 100px;
+  align-items: center;
+  text-align: center;
+}
