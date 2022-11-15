@@ -15,10 +15,11 @@ useEffect(() => {
 //Función que lee API
 const consultarApi = async () => {
 
-    const url = 'https://dragon-ball-super-api.herokuapp.com/api/characters';
+    const url = 'https://dragon-ball-super-api.herokuapp.com/api/characters'
     const respuesta = await fetch(url)
     const data = await respuesta.json()
-    setInfoApi(data)
+    const dataOrdenada = data.sort((a, b) => a.name.localeCompare(b.name))
+    setInfoApi(dataOrdenada)
 }
 
 //Función para buscar personaje
@@ -34,7 +35,7 @@ return (
     
     <div className='principal'>
         <div className='buscador'>
-            <strong>Escribe el Nombre del Personaje que buscas: </strong><input type='text' onChange={buscar} value={buscarPersonaje} />
+            <strong>Escribe el Nombre del Personaje que buscas: </strong><input type='text' onChange={buscar} />
         </div>
         <hr></hr>
         <div className='tarjetas'>
